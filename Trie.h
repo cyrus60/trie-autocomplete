@@ -12,7 +12,7 @@ private:
 	class Node {
 	public:
 		Node* children[26] = { nullptr };
-		bool isLeaf;
+		bool isLeaf = false;
 		Node() {}
 	};
 
@@ -30,10 +30,4 @@ public:
 	/// @param
 	/// @return bool value whether or not the word was inserted
 	bool insert(string word);
-
-	/// @brief recursive insertHelper function. recurses through trie inserting word given
-	/// @param string word word to be inserted
-	/// @param Node* current pointer to current Node
-	/// @return bool value whether or not the word was inserted
-	bool insertHelper(string word, Node* current);
 };
