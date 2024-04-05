@@ -4,5 +4,6 @@
 int main() {
 	Trie t;
 
-	t.insert("hello");
+	cout << t.insert("hello") << endl;
+	cout << t.insert("hello") << endl;
 }

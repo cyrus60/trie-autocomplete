@@ -6,14 +6,14 @@
 
 // Trie: main trie constructor
 Trie::Trie() {
-	// sets root equal to a new leaf node and size to 1
+	// sets root equal to a new leaf node, size to 1, wordcount to 0
 	root = new Node();
 	size = 1;
 	wordCount = 0;
 }
 
 
-// insert: 
+// insert: inserts given word into trie
 // Returns: bool value whether or not word was inserted
 // Paramaters: 
 //		word (string) - word to be inserted
@@ -38,13 +38,19 @@ bool Trie::insert(string word) {
 			size += 1;
 		}
 
-		// setting current nodes isLeaf property to true if i equals last index in word
 		if (i == word.length() - 1) {
+			// if there is a current pointer to the last index in the word and it is a leaf node, return false
+			if (current->isLeaf) {
+				return false;
+			}
+
+			// if current is not a leaf, set currents isLeaf to true and increment wordCount by 1, returning true
 			current->isLeaf = true;
+			wordCount += 1;
+			return true;
 		}
 
 		// set current pointer equal to currents children[index] pointer
 		current = current->children[index];
 	}
-	return true;
 }
