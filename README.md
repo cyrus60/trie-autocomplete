@@ -37,5 +37,5 @@ The trie stores words character-by-character in a tree structure where:
 ## Technical Implementation
 
 - **Language:** C++
-- **Key Concepts:** Trie data structure, recursive algorithms, dynamic memory management, prefix trees
+- **Key Concepts:** Trie data structure, recursive algorithms, dynamic memory management
 - **Memory Management:** Custom destructor with recursive node deletion to prevent memory leaks
