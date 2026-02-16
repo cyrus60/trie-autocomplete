@@ -15,7 +15,6 @@ This project implements a complete trie data structure for autocomplete function
 - **Efficient Prefix Search:** O(m) lookup time for prefix matching
 - **Memory-Optimized Structure:** Stores shared prefixes once using tree-based architecture
 - **Complete Word Suggestions:** Returns all possible completions for a given prefix
-- **Interactive CLI:** User-friendly command-line interface for testing autocomplete functionality
 
 ## How It Works
 
@@ -40,4 +39,3 @@ The trie stores words character-by-character in a tree structure where:
 - **Language:** C++
 - **Key Concepts:** Trie data structure, recursive algorithms, dynamic memory management, prefix trees
 - **Memory Management:** Custom destructor with recursive node deletion to prevent memory leaks
-- **Copy Semantics:** Implements deep copy co
